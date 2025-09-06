@@ -1,235 +1,113 @@
-# Tuesday September 2, 2025
-
-## Plan
-- Get Ad Account Performance Data
-
-From Dashboard Pull last 7 days (excluding today) of the following metrics
-m1 Cost-per-lead
-m2 Cost-per-click(all)
-m3 Click-through-rate(all)
-m4 Click-through-rate(link)
-m5 Frequency
-
-Determine if last 7 days is performing below performance benchmarks per the campaign audience (Decision branch?)****
-
-
-b1 VET IUL : $20
-b2 Veterans : $18
-b3 First Responders : $15
-b4 First Responder IUL : $16
-b5 Trucker : $20
-b6 Trucker IUL : $20
-b7 FEX : $15
-b8 General IUL : $15
-b9 Mortgage : $15
-b10 Nurse : $15
-b11 Teachers : $15
-b12 Construction/Contractor : $15
-b13 Annuity: $35
-
-
-
-Take note of all accounts that are high last 7 days....based off the benchmarks (Decison branch?)****
-
-
-Pull last 3 days (excluding today) of the following metrics, for all accounts that are "high/benchmark" last 7 days
-m1 Cost-per-lead
-m2 Cost-per-click(all)
-m3 Click-through-rate(all)
-m4 Click-through-rate(link)
-m5 Frequency
-
-
-
-Pull today (excluding today) of the following metrics, for all accounts that are "high/benchmark" last 3 days
-m1 Cost-per-lead
-m2 Cost-per-click(all)
-m3 Click-through-rate(all)
-m4 Click-through-rate(link)
-m5 Frequency
-
-
-Send all accounts that are high today and/or last 3 days to account examination stage.
-
-
---------------------------------------------------------------------
-
-
-kpis:
-  - "Accounts flagged correctly vs. benchmarks"
-risk_level: "medium"
+---
+title: Daily Workflow Logs
+owner: Dan Elkins
+date: 2025-09-06
+status: Active
 ---
 
-## Purpose
-Define a repeatable process for pulling ad account performance data and comparing results against benchmarks.
+# 🗂️ Daily Workflow Logs
 
-## Scope
-Applies to all active paid social ad accounts under Ads Maintenance.  
+Welcome to the **Daily Workflow Logs** repo.  
+This repository is where I document everything I do each day:  
+tasks, meetings, learnings, experiments, and progress.
 
-## Preconditions
-- Access to dashboard/reporting system
-- Current benchmark list (see below)
-- Ability to export 7-day, 3-day, and daily performance data
+---
 
-## Procedure
+## 📖 Purpose
+- Create a **daily habit** of documenting work and learning.  
+- Track progress over time with clean Git history.  
+- Build a **Single Source of Truth (SSOT)** for all activities.  
+- Enable automation in the future (summaries, dashboards, reports).  
 
-### Step 1 — Pull 7-day performance data
-- From dashboard, pull the last **7 days (excluding today)** of the following metrics:
-  - Cost per Lead (CPL)
-  - Cost per Click (All)
-  - CTR (All)
-  - CTR (Link)
-  - Frequency
+---
 
-### Step 2 — Compare to benchmarks
-**Benchmarks (CPL):**
-- VET IUL: $20  
-- Veterans: $18  
-- First Responders: $15  
-- First Responder IUL: $16  
-- Trucker: $20  
-- Trucker IUL: $20  
-- FEX: $15  
-- General IUL: $15  
-- Mortgage: $15  
-- Nurse: $15  
-- Teachers: $15  
-- Construction/Contractor: $15  
-- Annuity: $35  
+## 📂 Repo Structure
 
-**Decision Branch A**  
-- If 7-day CPL ≤ benchmark → Mark account **Healthy**, end process for this account.  
-- If 7-day CPL > benchmark → Mark account **High**, continue to Step 3.  
+```
+/logs/              # All daily log files stored here
+   YYYY-MM-DD.md    # Example daily log file
+README.md           # This file — guide, template, and index
+```
 
-### Step 3 — Pull 3-day performance data
-For all **High** accounts, pull the last **3 days (excluding today)** of metrics:  
-- CPL, CPC (All), CTR (All), CTR (Link), Frequency  
+---
 
-**Decision Branch B**  
-- If 3-day CPL ≤ benchmark → Mark account **Recovered**, end process for this account.  
-- If 3-day CPL > benchmark → Continue to Step 4.  
+## 📝 How to Use
 
-### Step 4 — Pull 1-day performance data
-For all accounts still **High** after 3 days, pull **Today (excluding today)** metrics:  
-- CPL, CPC (All), CTR (All), CTR (Link), Frequency  
+1. Each evening, run the script (or manually copy) to generate a new daily log.  
+2. Logs are stored in `/logs/` with the filename format:  
+   ```
+   YYYY-MM-DD.md
+   ```
+3. Each log uses the template below (with front matter).  
+4. Commit the log file to Git at the end of the day.  
 
-**Decision Branch C**  
-- If 1-day CPL > benchmark → Escalate to **Account Examination Stage**.  
-- Else → Mark account **Under Watch**, monitor next cycle.  
+---
 
+## 🧩 Daily Log Template
 
+```markdown
+---
+title: Daily Log
+owner: Dan Elkins
+date: YYYY-MM-DD
+status: Draft
+---
 
+# Daily Log
 
+## Date
+[Day, Month Day, Year]
 
+---
 
+## Plan
+- [ ] ...
 
-
-
-
-
-
-
-
-
-
---------------------------------------------------------------------
-
-## Validation
-- Accounts above benchmark are escalated properly.
-- Healthy accounts are not escalated incorrectly.
-- Escalation list delivered daily.
-
-## Rollback / Escalation
-- If data pull is incomplete, rerun export and recheck benchmarks.
-- If escalation flagged in error, correct and reclassify account.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- Create Campaign
-Navigate to ad account
-Create new campaign with leads as objective and setup type "manual leads campaign"
-Name the campaign with appropriate convention
-Select campaign budget
-Select the budget
-Select Special Ads Category "Financial Products and Services"
-Navigate to adset level
-Name the adset
-Select the appropriate facebook page
-Select performance goal "maximize Number of leads"
-
-
-
-
-
-
-
-
-
-Determine if last 3 days is performing below performance benchmarks per campaign audience ****(Decsion Branch)****
-
-
-
-
-
-
-
-
+---
 
 ## Meetings
--
+- ...
+
+---
 
 ## Log
--
+- ...
 
-# Review
-    - Highlights:
-    - Roadblocks:
-    - Next steps:
+---
 
+## Review
+**Highlights**
+- ...
 
+**Roadblocks**
+- ...
+
+**Next Steps**
+- ...
+
+---
+
+## Notes
+- ...
+```
+
+---
+
+## 📅 Index of Logs
+
+This section links to all existing logs in `/logs/`.
+
+- [2025-09-06](logs/2025-09-06.md)
+
+(Add each new day here or automate the index generation.)
+
+---
+
+## ⚙️ Automation Plan
+
+The next step is to create a script (`newlog.sh`) that will:  
+1. Generate a new markdown file inside `/logs/` using today’s (or tomorrow’s) date.  
+2. Insert the template automatically.  
+3. Append the new file to the **Index of Logs** in this `README.md`.
+
+---
